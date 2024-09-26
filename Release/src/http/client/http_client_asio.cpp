@@ -20,20 +20,14 @@
 #include "cpprest/asyncrt_utils.h"
 #include <sstream>
 
-#if defined(__clang__)
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wunused-local-typedef"
-#pragma clang diagnostic ignored "-Winfinite-recursion"
-#endif
+
 #include <boost/algorithm/string.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/ssl.hpp>
 #include <boost/asio/ssl/error.hpp>
 #include <boost/asio/steady_timer.hpp>
 #include <boost/bind/bind.hpp>
-#if defined(__clang__)
-#pragma clang diagnostic pop
-#endif
+
 
 #if defined(BOOST_NO_CXX11_SMART_PTR)
 #error "Cpp rest SDK requires c++11 smart pointer support from boost"
