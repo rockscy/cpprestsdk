@@ -56,13 +56,7 @@ function(cpprest_find_openssl)
     INCLUDE(CheckCXXSourceCompiles)
     set(CMAKE_REQUIRED_INCLUDES "${OPENSSL_INCLUDE_DIR}")
     set(CMAKE_REQUIRED_LIBRARIES "${OPENSSL_LIBRARIES}")
-    CHECK_CXX_SOURCE_COMPILES("
-      #include <openssl/ssl.h>
-      int main()
-      {
-      ::SSL_COMP_free_compression_methods();
-      }
-    " _SSL_LEAK_SUPPRESS_AVAILABLE)
+ 
   endif()
 
   add_library(cpprestsdk_openssl_internal INTERFACE)
